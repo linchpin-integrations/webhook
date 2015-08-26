@@ -1,0 +1,32 @@
+{
+  "get": {
+    "type": "object",
+    "description":"Get a webhook response.",
+    "properties": {
+      "webhook": {
+        "$ref": "#/definitions/webhook"
+      }
+    },
+    "required": ["webhook"]
+  },
+  ".definitions": {
+    "webhook": {
+      "type": "object",
+      ".linchpin": "Integrations/webhook",
+      "properties": {
+        "name": {
+          "type": "string",
+          "title": "Name"
+        },
+        "url": {
+          "title": "Url",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "url"
+      ]
+    }
+  }
+}
